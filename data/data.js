@@ -6,6 +6,7 @@ app.use(cors());
 const uri = "mongodb+srv://ashwinmongo:ashwinmongo911@ashwincluster.ujjhi.mongodb.net/ChatApp?retryWrites=true&w=majority&appName=ashwincluster"
 mongoose.connect(uri).then(() => console.log("Connected to database!"))
 const schema = new mongoose.Schema({
+    id:String,
     msg: String
 })
 const Model = mongoose.model('messages', schema)
